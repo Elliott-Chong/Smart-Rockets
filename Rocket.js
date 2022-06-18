@@ -21,20 +21,25 @@ class Rocket {
       this.position.add(this.velocity);
       if (dist(this.position.x, this.position.y, target.x, target.y) < 10) {
         this.stop = true;
+        this.fitness *= 2;
       }
       if (
-        this.position.x < obstacle.x - obstacle.width / 2 ||
-        this.position.x > obstacle.x + obstacle.width / 2
-      ) {
-        this.stop = true;
-      }
-
-      if (
-        this.position.y < obstacle.y + obstacle.height / 2 ||
+        this.position.x < obstacle.x + obstacle.width / 2 &&
+        this.position.x > obstacle.x - obstacle.width / 2 &&
+        this.position.y < obstacle.y + obstacle.height / 2 &&
         this.position.y > obstacle.y - obstacle.height / 2
       ) {
         this.stop = true;
       }
+      if (
+        this.position.x >= width ||
+        this.position.x <= 0 ||
+        this.position.y >= height ||
+        this.position.y <= 0
+      ) {
+        this.stop = true;
+      }
+
       this.acceleration.mult(0);
     }
   }
@@ -51,7 +56,7 @@ class Rocket {
 
   calculateFitness() {
     let d = dist(this.position.x, this.position.y, target.x, target.y);
-    this.fitness = (1 / d) ** 10;
+    this.fitness = (1 / d) ** 2;
     // if (this.stop) {
     //   this.fitness * 100;
     // }

@@ -1,5 +1,5 @@
-const POPULATION_SIZE = 100;
-const LIFE_SPAN = 200;
+const POPULATION_SIZE = 500;
+const LIFE_SPAN = 500;
 let count = 0;
 let population;
 let countP;
@@ -16,8 +16,8 @@ function setup() {
   target = createVector(width / 2, 50);
   obstacle = {
     x: width / 2,
-    y: height / 2 - 100,
-    width: width / 2 + 100,
+    y: height / 2 + 100,
+    width: width / 2,
     height: 20,
   };
 }
