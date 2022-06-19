@@ -38,7 +38,6 @@ function reset() {
   population = new Population();
   count = 0;
   generation = 1;
-  population_slider.value(250);
   lifespan_slider.value(500);
   speed.value(1);
 }
