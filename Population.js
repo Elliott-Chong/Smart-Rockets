@@ -1,5 +1,5 @@
 class Population {
-  constructor(POPULATION_SIZE) {
+  constructor() {
     this.MUTATION_RATE = MUTATION_RATE;
     this.POPULATION_SIZE = POPULATION_SIZE;
     this.population = new Array(this.POPULATION_SIZE);
@@ -54,5 +54,6 @@ class Population {
       tempPool.push(child);
     }
     this.population = tempPool;
+    generation++;
   }
 }

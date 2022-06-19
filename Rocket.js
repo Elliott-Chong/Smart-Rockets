@@ -56,7 +56,7 @@ class Rocket {
 
   calculateFitness() {
     let d = dist(this.position.x, this.position.y, target.x, target.y);
-    this.fitness = (1 / d) ** 2;
+    this.fitness = 1 / d;
     // if (this.stop) {
     //   this.fitness * 100;
     // }

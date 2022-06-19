@@ -14,6 +14,53 @@
   <body>
     <main id="container">
       <div id="canvas"></div>
+      <section id="overarching-div">
+        <div id="info-div">
+          <p class="info">
+            Generation: <span class="content" id="generation"></span>
+          </p>
+          <p class="info">
+            Lifespan: <span id="lifespan" class="content"></span>
+          </p>
+        </div>
+        <div id="control-div">
+          <div class="form-control">
+            <label>Speed: (1-10)</label>
+            <div id="speed"></div>
+          </div>
+          <div class="form-control">
+            <label for="">Lifespan: (1-1000)</label>
+            <div id="lifespan-control"></div>
+          </div>
+          <div class="form-control">
+            <label>Population size: (1-500)</label>
+            <div id="population-size"></div>
+          </div>
+        </div>
+        <div id="button-div">
+          <div id="reset-btn"></div>
+          <a href="https://github.com/elliott-chong/smart-rockets" class="btn"
+            >Source code</a
+          >
+        </div>
+      </section>
+      <div class="description-div">
+        <p class="desc">
+          Some settings may require you to reset the population in order to see
+          the changes.
+        </p>
+        <br />
+        <p class="desc">
+          This is a showcase of genetic algorithms, a search heuristic inspired
+          by natural evolution.
+        </p>
+        <br />
+        <p class="desc">
+          The fittest elements of the population gets crossbred and reproduces
+          the next generation with their genes. After many generations, they
+          will eventually converge on the optimal genes for the task at hand.
+        </p>
+      </div>
     </main>
   </body>
 </html>
