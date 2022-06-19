@@ -9,6 +9,7 @@
     <script src="./sketch.js" defer></script>
     <script src="./Rocket.js" defer></script>
     <script src="./Population.js" defer></script>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <script src="./p5.min.js" defer></script>
   </head>
   <body>
@@ -59,6 +60,11 @@
           The fittest elements of the population gets crossbred and reproduces
           the next generation with their genes. After many generations, they
           will eventually converge on the optimal genes for the task at hand.
+        </p>
+        <br />
+        <p class="desc">
+          The fitness of each rocket is calculated by the inverse of the
+          distance between it and the target at the end of its lifespan.
         </p>
       </div>
     </main>

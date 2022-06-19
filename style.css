@@ -87,6 +87,7 @@ button ,.btn{
     display: grid;
     grid-template-areas: 'canvas'
     'controls'
-    'desc' }
+    'desc';
+ }
   
 }
